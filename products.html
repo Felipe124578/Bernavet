@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" href="img/logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1dfeadbb80.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L156K8SJXS">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L156K8SJXS');
+
+        const animation = 'click'
+        const remove = 'card1'
+
+        function find(){
+            document.getElementById('after').classList.add(animation)
+            document.getElementById('card').classList.remove(remove)
+        }    
+
+        function back(){
+            document.getElementById('after').classList.remove(animation)
+            document.getElementById('card').classList.add(remove)
+        }
+
+        //search
+
+        function searchProduct() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('product');
+            
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";                 
+                }
+            }
+        }
+
+    </script>
+    <title>Bernavet Saúde Animal</title>
+</head>
+<body>
+
+    <div id="card" class="card1">
+        <div class="container text-center">
+            <div class="">
+
+                <button onclick="back()" class="btn btn-lg">
+                    <i style="" class="fa-regular fa-circle-xmark"></i>
+                </button>
+        
+                <div class="card">
+                    <div class="card-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="img/logo.jpeg" style="width: 60px; border-radius: 60px;">
+                                </div>
+                                <div class="col-9">
+                                    <form class="d-flex navbar-brand mt-2" role="search">
+                                        <input id="searchbar" onkeyup="searchProduct()" name="search" class="form-control" type="search" placeholder="Buscar..." aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit" disabled>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </form>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul id="list">
+                            <li class="product"><a href="aminomilk.html">Aminomilk - 1.800gr</a></li>
+                            <li class="product"><a href="an@abolic.html">An@bolic - 500ml</a></li>
+                            <li class="product"><a href="athleticN3.html">Athletic Nutrition Horse - 3KG</a></li>
+                            <li class="product"><a href="athleticN5.html">Athletic Nutrition Horse -5KG</a></li>
+                            <li class="product"><a href="capivorin1.html">Capivorin - 1L</a></li>
+                            <li class="product"><a href="catosal.html">Catosal B12 - 100ml</a></li>
+                            <li class="product"><a href="creatina90.html">Creatina90 Syntec - 500g</a></li>
+                            <li class="product"><a href="creatinaL.html">Creatina Lavizoo - 500g</a></li>
+                            <li class="product"><a href="dectomax.html">Dectomax 1% - 50ml</a></li>
+                            <li class="product"><a href="ectohorse.html">Ecto Horse - 950g</a></li>
+                            <li class="product"><a href="ectomagi.html">Ectomagi Atack - 10KG</a></li>
+                            <li class="product"><a href="lavizMO.html">Laviz M.O Horse - 80g</a></li>
+                            <li class="product"><a href="maxtropin.html">Maxtropin - 240ml</a></li>
+                            <li class="product"><a href="monovin.html">Monovin A - 20ml</a></li>
+                            <li class="product"><a href="nitrobol.html">Nitrobol - 1L</a></li>
+                            <li class="product"><a href="nitroboost.html">NitroBoost - 240ml</a></li>
+                            <li class="product"><a href="nitrocell.html">Nitro Cell -1L</a></li>
+                            <li class="product"><a href="nitroDamino.html">Nitro Dog - Aminoácid</a></li>
+                            <li class="product"><a href="nitroDcondro.html">Nitro Dog - Condroglicin</a></li>
+                            <li class="product"><a href="nitroDpelo.html">Nitro Dog - Pelo e Derm</a></li>
+                            <li class="product"><a href="nitroDpure.html">Nitro Dog - Pure Protein</a></li>
+                            <li class="product"><a href="nitroDvita.html">Nitro Dog - Vitamin</a></li>
+                            <li class="product"><a href="nitroH1.html">Nitro Horse Complet - 1KG</a></li>
+                            <li class="product"><a href="nitroH5.html">Nitro Horse Complet - 5KG</a></li>
+                            <li class="product"><a href="nitroH10.html">Nitro Horse Complet - 10KG</a></li>
+                            <li class="product"><a href="nitroHcrescer.html">Nitro Horse Crescimento - 1L</a></li>
+                            <li class="product"><a href="nitrosilo.html">Niro Silo Shield</a></li>
+                            <li class="product"><a href="oxygen.html">Oxygen Lavizoo - 1L</a></li>
+                            <li class="product"><a href="potenay.html">Potenay 50c - Caixa com 10</a></li>
+                            <li class="product"><a href="saco50.html">Saco Silagem - 50 Unidades</a></li>
+                            <li class="product"><a href="saco100.html">Saco Silagem - 100 Unidades</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div id="after">
+
+        <header id="menu">
+            <nav class="navbar navbar-expand-lg fixed-top bg-white">
+    
+                <div class="container-fluid">
+    
+                    <a id="logo-desk" class="navbar-brand text-center" href="#">
+                        <h2>Bernavet<br>Saúde Animal</h2>
+                    </a>
+    
+                    <div id="logo-mobile">
+                        <form class="d-flex navbar-brand" role="search">
+                            <input onclick="find()" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit" disabled>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                     
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-family: 'Bebas Neue', sans-serif;">Bernavet Saúde Animal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body text-center">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="active" href="products.html">Produtos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contato</a>
+                                </li>
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="index.html">Sobre nós</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input onclick="find()" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit" disabled>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+    
+                </div>
+              </nav>
+        </header>
+        
+        <section id="hello">
+            <div class="container-fluid">
+                <div class="row text-center"> 
+                    <h5><span class="text-success">Frete grátis</span> em compras á cima de R$189,90</h5>
+                </div>
+            </div>
+        </section>
+    
+        <section id="product" data-anime="top">
+    
+            <div class="d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <h4>PRODUTOS</h4>
+                </div>
+            </div>
+    
+            <div id="pDesk">
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+    
+                        <div class="col-3">
+    
+                            <div class="accordion m-2" id="accordionExample" data-anime="top">
+    
+                                <div class="accordion-item text-left">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                            Suplementos
+                                        </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="">
+                                                <li>
+                                                    <a href="athleticN3.html">
+                                                        Athletic Nutrition Horse 3KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="athleticN5.html">
+                                                        Athletic Nutrition Horse 5KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroH1.html">
+                                                        Nitro Horse Complet 1KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroH5.html">
+                                                        Nitro Horse Complet 5KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroH10.html">
+                                                        Nitro Horse Complet 10KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="creatinaL.html">
+                                                        Creatina Lavizoo 500gr
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="creatina90.html">
+                                                        Creatina90 Syntec 500gr
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="lavizMO.html">
+                                                        Laviz  M.O Horse
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="oxygen.html">
+                                                        Oxygen Lavizoo 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitrocell.html">
+                                                        Nitro Cell 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroHcrescer.html">
+                                                        Nitro Horse - Crescimento 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitrobol.html">
+                                                       Nitrobol - Casco 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroboost.html">
+                                                       NitroBoost - Aumento de Lactação 
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="capivorin1.html">
+                                                        Capivorin - 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="maxtropin.html">
+                                                        Maxtropin - 240ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="aminomilk.html">
+                                                        Aminomilk - 1.800g
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                            Vitaminas
+                                        </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="catosal.html">
+                                                        Catosal B12 - 100ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="monovin.html">
+                                                        Monovin A - 50ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="potenay.html">
+                                                        Potenay 50C - 10ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="an@abolic.html">
+                                                        Anabolic - 500ml
+                                                    </a>
+                                                </li>
+    
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseTwo">
+                                            Vermífugos e Carrapaticidas
+                                        </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                           <ul>
+                                                <li>
+                                                    <a href="dectomax.html">
+                                                        Dectomax 1% - 50ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="ectomagi.html">
+                                                        Ectomagi Atack - 10KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="ectohorse.html">
+                                                        Ecto Horse - 1KG
+                                                    </a>
+                                                </li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                            Pet
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="nitroDpure.html">
+                                                        Nitro Dog Pure Protein
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDpelo.html">
+                                                        Nitro Dog Pelo e Derm
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDcondro.html">
+                                                        Nitro Dog Condroglicin
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDvita.html">
+                                                        Nitro Dog Vitam
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDamino.html">
+                                                        Nitro Dog Aminiácid
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                                            Outros
+                                        </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="saco50.html">
+                                                        Saco Silagem 52x110 - 200 micras (50UN)
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="saco100.html">
+                                                        Saco Silagem 52x110 - 200 micras (100UN)
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitrosilo.html">
+                                                        Nitro Silo Shield - 100gr
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                        <div class="col-md-3">
+    
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/athletic/AthleticHorse5kg.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Athletic Nutrition Horse - 3KG</h3>
+                                        <hr>
+                                        <h5>R$350,00</h5>
+                                        <p class="card-text">4x R$116,66</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="athleticN3.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/athletic/AthleticHorse5kg.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Athletic Nutrition Horse - 5KG</h3>
+                                        <hr>
+                                        <h5>R$550,00</h5>
+                                        <p class="card-text">4x R$137,50</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="athleticN5.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroH1/nitroH1.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Horse - 1KG</h3>
+                                        <hr>
+                                        <h5>R$150,00</h5>
+                                        <p class="card-text">2x R$75,00</p>
+                                        <p class="card-text text-success">Frete grátis em 2 unidades</p>
+                                        <a href="nitroH1.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroH5/nitroH5.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Horse - 5KG</h3>
+                                        <hr>
+                                        <h5>R$550,00</h5>
+                                        <p class="card-text">4x R$137,50</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="nitroH5.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroH10/nitrohorse10.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Horse - 10KG</h3>
+                                        <hr>
+                                        <h5>R$900,00</h5>
+                                        <p class="card-text">4x R$225,00</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="nitroH10.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/creatinaL/creatinalvizoo.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Creatina Lavizoo - 500gr</h3>
+                                        <hr>
+                                        <h5>R$195,00</h5>
+                                        <p class="card-text">3x R$65,00</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="creatinaL.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/creatina90/creatina90.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Creatina90 Syntec - 500gr</h3>
+                                        <hr>
+                                        <h5>R$189,00</h5>
+                                        <p class="card-text">3x R$63,00</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="creatina90.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/catosal/catosalb12.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Catosal B12 - 100ml</h3>
+                                        <hr>
+                                        <h5>R$120,00</h5>
+                                        <p class="card-text">2x R$60,00</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="catosal.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/monovinA/monovinA.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Monovin A - 20ml</h3>
+                                        <hr>
+                                        <h5>R$25,00</h5>
+                                        <p class="card-text">1x R$25,00</p>
+                                        <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                        <a href="monovin.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/saco branco/saco.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Saco Silagem 51x110 (100UN)</h3>
+                                        <hr>
+                                        <h5>R$189,00</h5>
+                                        <p class="card-text">3x R$47,47</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="saco100.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="col-md-3">
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/dectomax/dectomax.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Dectomax 1% - 50ml</h3>
+                                        <hr>
+                                        <h5>R$35,00</h5>
+                                        <p class="card-text">1x R$35,00</p>
+                                        <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                        <a href="dectomax.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/ectomagi/ectomagi1.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Ectomagi Atack - 10KG</h3>
+                                        <hr>
+                                        <h5>R$690,00</h5>
+                                        <p class="card-text">4x R$172,00</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="ectomagi.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroDpelo/nitroDpelo.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Dog Pelo e Derm</h3>
+                                        <hr>
+                                        <h5>R$90,00</h5>
+                                        <p class="card-text">3x R$30,00</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="nitroDpelo.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroDVelhos/nitroDvelhos.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Dog CONDROGLICIN</h3>
+                                        <hr>
+                                        <h5>R$90,00</h5>
+                                        <p class="card-text">3x R$30,00</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="nitroDcondro.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/saco branco/saco.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Saco Silagem 51x110 (50UN)</h3>
+                                        <hr>
+                                        <h5>R$70,00</h5>
+                                        <p class="card-text">2x R$35,00</p>
+                                        <p class="card-text text-success">Frete grátis em três unidades</p>
+                                        <a href="saco50.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/lavizMO/lavizMO.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Laviz M.O Horse - 80gr</h3>
+                                        <hr>
+                                        <h5>R$55,00</h5>
+                                        <p class="card-text">2x R$27,50</p>
+                                        <p class="card-text text-success">Frete grátis em 3 unidades</p>
+                                        <a href="lavizMO.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/oxygenL/oxygen.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Oxygen Lavizoo - 500ml</h3>
+                                        <hr>
+                                        <h5>R$170,00</h5>
+                                        <p class="card-text">3x R$56,66</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="oxygen.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitrocell/nitrocell.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Cell - 1L</h3>
+                                        <hr>
+                                        <h5>R$160,00</h5>
+                                        <p class="card-text">3x R$53,33</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="nitrocell.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitrocrescimento/nitrocrescimento.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Horse Crescimento - 1L</h3>
+                                        <hr>
+                                        <h5>R$150,00</h5>
+                                        <p class="card-text">3x R$50,00</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/Aminomilk/aminomilk.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Aminomilk - 1.800gr</h3>
+                                        <hr>
+                                        <h5>R$250,00</h5>
+                                        <p class="card-text">3x R$83,34</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="aminomilk.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="col-md-3">
+                            
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitrobol/nitrobol.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitrobol Casco - 1L</h3>
+                                        <hr>
+                                        <h5>R$220,00</h5>
+                                        <p class="card-text">3x R$73,34</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="nitrobol.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroboost/nitroboost.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitroboost Lactação - 190ml</h3>
+                                        <hr>
+                                        <h5>R$180,00</h5>
+                                        <p class="card-text">3x R$45,00</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="nitroboost.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/capivorin/capivorin.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Capivorin - 1L</h3>
+                                        <hr>
+                                        <h5>R$115,00</h5>
+                                        <p class="card-text">3x R$38,33</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="capivorin1.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/potenaycx10/potenay.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Potenay50C - 10UN</h3>
+                                        <hr>
+                                        <h5>R$130,00</h5>
+                                        <p class="card-text">3x R$43,33</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="potenay.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/anabolic/an@bolic500.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">An@bolic - 500ml</h3>
+                                        <hr>
+                                        <h5>R$250,00</h5>
+                                        <p class="card-text">3x R$83,33</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="an@abolic.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/ectohorse/ectohorse.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Ecto Horse - 1KG</h3>
+                                        <hr>
+                                        <h5>R$140,00</h5>
+                                        <p class="card-text">3x R$46,66</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="ectohorse.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroDpure/nitroDpure.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Dog Pure Protein</h3>
+                                        <hr>
+                                        <h5>R$140,00</h5>
+                                        <p class="card-text">3x R$46,66</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="nitroDpure.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroDvitam/nitroDvitam.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Dog Vitam</h3>
+                                        <hr>
+                                        <h5>R$90,00</h5>
+                                        <p class="card-text">3x R$30,00</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="nitroDvita.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroDAmino/nitroDAmino.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Dog Aminoácid</h3>
+                                        <hr>
+                                        <h5>R$90,00</h5>
+                                        <p class="card-text">3x R$30,00</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="nitroDamino.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/nitroSilo/nitrosilo.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Nitro Silo Shield -100gr</h3>
+                                        <hr>
+                                        <h5>R$140,00</h5>
+                                        <p class="card-text">3x R$46,66</p>
+                                        <p class="card-text text-success">Frete grátis em duas unidades</p>
+                                        <a href="nitrosilo.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card m-2">
+                                <div class="container">
+                                    <img src="img/produtos/maxtropin/maxtropin.jpeg" class="card-img-top img-fluid" alt="">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Maxtropin - 240ml</h3>
+                                        <hr>
+                                        <h5>R$180,00</h5>
+                                        <p class="card-text">3x R$47,47</p>
+                                        <p class="card-text text-success">Frete grátis</p>
+                                        <a href="maxtropin.html" class="btn btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+    
+            <div id="pMobile">
+    
+                <div class="container">
+    
+                    <div class="row">
+    
+                        <div class="col">
+    
+                            <div class="accordion m-2" id="accordionExample">
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                            Suplementos
+                                        </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="athleticN3.html">
+                                                        Athletic Nutrition Horse 3KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="athleticN5.html">
+                                                        Athletic Nutrition Horse 5KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroH1.html">
+                                                        Nitro Horse Complet 1KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroH5.html">
+                                                        Nitro Horse Complet 5KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroH10.html">
+                                                        Nitro Horse Complet 10KG
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="creatinaL.html">
+                                                        Creatina Lavizoo 500gr
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="creatina90.html">
+                                                        Creatina90 Syntec 500gr
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="lavizMO.html">
+                                                        Laviz  M.O Horse
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="oxygen.html">
+                                                        Oxygen Lavizoo 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitrocell.html">
+                                                        Nitro Cell 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroHcrescer.html">
+                                                        Nitro Horse - Crescimento 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitrobol.html">
+                                                       Nitrobol - Casco 1L
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroboost.html">
+                                                       NitroBoost - Aumento de Lactação 
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="capivorin1.html">
+                                                        Capivorin
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="maxtropin.html">
+                                                        Maxtropin - 240ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="aminomilk.html">
+                                                        Aminomilk - 1.800g
+                                                    </a>
+                                                </li>
+    
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                            Vitaminas
+                                        </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="catosal.html">
+                                                        Catosal B12 - 100ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="monovin.html">
+                                                        Monovin A - 50ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="potenay.html">
+                                                        Potenay 50C - 10ml
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="an@abolic.html">
+                                                        Anabolic - 500ml
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseTwo">
+                                            Vermífugos e Carrapaticidas
+                                        </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="dectomax.html">
+                                                        Dectomax 1% - 50ml
+                                                    </a>
+                                                </li>
+        
+                                                <li>
+                                                    <a href="ectomagi.html">
+                                                        Ectomagi Atack - 10KG
+                                                    </a>
+                                                </li>
+        
+                                                <li>
+                                                    <a href="ectohorse.html">
+                                                        Ecto Horse - 1KG
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                            Pet
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="nitroDpure.html">
+                                                        Nitro Dog Pure Protein
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDpelo.html">
+                                                        Nitro Dog Pelo e Derm
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDcondro.html">
+                                                        Nitro Dog Condroglicin
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDvita.html">
+                                                        Nitro Dog Vitam
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitroDamino.html">
+                                                        Nitro Dog Aminiácid
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                                            Outros
+                                        </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="saco50.html">
+                                                        Saco Silagem 52x110 - 200 micras (50UN)
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="saco100.html">
+                                                        Saco Silagem 52x110 - 200 micras (100UN)
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <a href="nitrosilo.html">
+                                                        Nitro Silo Shield - 100gr
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="container">
+    
+                    <div class="row">
+    
+                        <div class="d-flex justify-content-center">
+        
+                            <div class="col-6">
+                                
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/athletic/AthleticHorse5kg.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Athletic Nutrition Horse - 3KG</h3>
+                                            <hr>
+                                            <h5>R$350,00</h5>
+                                            <p class="card-text">4x R$116,66</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="athleticN3.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/athletic/AthleticHorse5kg.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Athletic Nutrition Horse - 5KG</h3>
+                                            <hr>
+                                            <h5>R$550,00</h5>
+                                            <p class="card-text">4x R$137,50</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="athleticN5.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroH1/nitroH1.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Horse - 1KG</h3>
+                                            <hr>
+                                            <h5>R$150,00</h5>
+                                            <p class="card-text">2x R$75,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitroH1.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroH5/nitroH5.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Horse - 5KG</h3>
+                                            <hr>
+                                            <h5>R$550,00</h5>
+                                            <p class="card-text">4x R$137,50</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="nitroH5.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroH10/nitrohorse10.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Horse - 10KG</h3>
+                                            <hr>
+                                            <h5>R$900,00</h5>
+                                            <p class="card-text">4x R$225,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="nitroH10.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/creatinaL/creatinalvizoo.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Creatina Lavizoo - 500gr</h3>
+                                            <hr>
+                                            <h5>R$195,00</h5>
+                                            <p class="card-text">3x R$65,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="creatinaL.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/creatina90/creatina90.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Creatina90 Syntec - 500gr</h3>
+                                            <hr>
+                                            <h5>R$189,00</h5>
+                                            <p class="card-text">3x R$63,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="creatina90.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/catosal/catosalb12.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Catosal B12 - 100ml</h3>
+                                            <hr>
+                                            <h5>R$120,00</h5>
+                                            <p class="card-text">2x R$60,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="catosal.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/monovinA/monovinA.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Monovin A - 20ml</h3>
+                                            <hr>
+                                            <h5>R$25,00</h5>
+                                            <p class="card-text">1x R$25,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="monovin.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/dectomax/dectomax.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Dectomax 1% - 50ml</h3>
+                                            <hr>
+                                            <h5>R$35,00</h5>
+                                            <p class="card-text">1x R$35,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="dectomax.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/ectomagi/ectomagi1.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Ectomagi Atack - 10KG</h3>
+                                            <hr>
+                                            <h5>R$690,00</h5>
+                                            <p class="card-text">4x R$172,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="ectomagi.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroDpelo/nitroDpelo.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Dog Pelo e Derm</h3>
+                                            <hr>
+                                            <h5>R$90,00</h5>
+                                            <p class="card-text">3x R$30,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitroDpelo.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroDVelhos/nitroDvelhos.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Dog CONDROGLICIN</h3>
+                                            <hr>
+                                            <h5>R$90,00</h5>
+                                            <p class="card-text">3x R$30,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitroDcondro.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/saco branco/saco.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Saco Silagem 51x110 (50UN)</h3>
+                                            <hr>
+                                            <h5>R$70,00</h5>
+                                            <p class="card-text">2x R$35,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="saco50.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/Aminomilk/aminomilk.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Aminomilk - 1.800gr</h3>
+                                            <hr>
+                                            <h5>R$250,00</h5>
+                                            <p class="card-text">3x R$83,34</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="aminomilk.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+                            <div class="col-6">
+                                
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/lavizMO/lavizMO.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Laviz M.O Horse - 80gr</h3>
+                                            <hr>
+                                            <h5>R$55,00</h5>
+                                            <p class="card-text">2x R$27,50</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="lavizMO.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/oxygenL/oxygen.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Oxygen Lavizoo - 500ml</h3>
+                                            <hr>
+                                            <h5>R$170,00</h5>
+                                            <p class="card-text">3x R$56,66</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="oxygen.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitrocell/nitrocell.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Cell - 1L</h3>
+                                            <hr>
+                                            <h5>R$160,00</h5>
+                                            <p class="card-text">3x R$53,33</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="nitrocell.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitrocrescimento/nitrocrescimento.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Horse Crescimento - 1L</h3>
+                                            <hr>
+                                            <h5>R$150,00</h5>
+                                            <p class="card-text">3x R$50,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitrobol/nitrobol.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitrobol Casco - 1L</h3>
+                                            <hr>
+                                            <h5>R$220,00</h5>
+                                            <p class="card-text">3x R$73,34</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="nitrobol.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroboost/nitroboost.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitroboost Lactação - 190ml</h3>
+                                            <hr>
+                                            <h5>R$180,00</h5>
+                                            <p class="card-text">3x R$45,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="nitroboost.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/capivorin/capivorin.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Capivorin - 1L</h3>
+                                            <hr>
+                                            <h5>R$115,00</h5>
+                                            <p class="card-text">3x R$38,33</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="capivorin1.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/potenaycx10/potenay.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Potenay50C - 10UN</h3>
+                                            <hr>
+                                            <h5>R$130,00</h5>
+                                            <p class="card-text">3x R$43,33</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="potenay.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/anabolic/an@bolic500.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">An@bolic - 500ml</h3>
+                                            <hr>
+                                            <h5>R$250,00</h5>
+                                            <p class="card-text">3x R$83,33</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="an@abolic.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/ectohorse/ectohorse.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Ecto Horse - 1KG</h3>
+                                            <hr>
+                                            <h5>R$140,00</h5>
+                                            <p class="card-text">3x R$46,66</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="ectohorse.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroDpure/nitroDpure.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Dog Pure Protein</h3>
+                                            <hr>
+                                            <h5>R$140,00</h5>
+                                            <p class="card-text">3x R$46,66</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitroDpure.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroDvitam/nitroDvitam.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Dog Vitam</h3>
+                                            <hr>
+                                            <h5>R$90,00</h5>
+                                            <p class="card-text">3x R$30,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitroDvita.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroDAmino/nitroDAmino.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Dog Aminoácid</h3>
+                                            <hr>
+                                            <h5>R$90,00</h5>
+                                            <p class="card-text">3x R$30,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitroDamino.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/nitroSilo/nitrosilo.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Nitro Silo Shield -100gr</h3>
+                                            <hr>
+                                            <h5>R$140,00</h5>
+                                            <p class="card-text">3x R$47,00</p>
+                                            <p class="card-text text-success">Frete grátis á partir de R$189,90</p>
+                                            <a href="nitrosilo.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/saco branco/saco.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Saco Silagem 51x110 (100UN)</h3>
+                                            <hr>
+                                            <h5>R$189,00</h5>
+                                            <p class="card-text">3x R$63,00</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="saco100.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card m-2">
+                                    <div class="container">
+                                        <img src="img/produtos/maxtropin/maxtropin.jpeg" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Maxtropin - 240ml</h3>
+                                            <hr>
+                                            <h5>R$180,00</h5>
+                                            <p class="card-text">3x R$47,47</p>
+                                            <p class="card-text text-success">Frete grátis</p>
+                                            <a href="maxtropin.html" class="btn btn-primary">Saiba mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section id="how" data-anime="bottom">
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h5>Como trabalhamos?</h5>
+                        <p>
+                            Atendimento diferenciado com prioridade na saúde dos animais de nossos clientes, 
+                            visando a qualidade de nossos produtos, tornando o custo um benefício.
+                            Trabalhamos com técnicos veterinários avaliando cada caso de nossos clientes, ajudando nossos vendedores
+                            a oferecer um atendimento completo. 
+                        </p>
+                    </div>
+    
+                    <div id="contact" class="col-md-4 text-center">
+                        <h5>Contato</h5>
+                        
+                        <p>Entre em contato para mais informações, ou nos siga nas redes sociais.</p>
+    
+                        <a href="https://wa.me/5517981123860"><i class="fa-brands fa-whatsapp"></i></a>
+    
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+    
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+    
+                    <div class="col-md-4 text-center">
+                        <h5>Menu</h5>
+                        <a href="index.html">Início</a><br>
+                        <a href="products.html">Produtos</a><br>
+                        <a href="#different">Sobre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="container">
+            <hr>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center p-2">
+                        <h5 class="p-2">Formas de pagamento</h5>
+                        <img src="img/visa.png" style="width: 65px;">
+                        <img src="img/boleto.png" style="width: 65px;">
+                        <img src="img/pagseguro.png" style="width: 65px;">
+                        <img src="img/elo.png" style="width: 65px;">
+                        <img src="img/mercadopago.png" style="width: 65px;">
+                        <img src="img/mastercard.png" style="width: 65px;">
+                    </div>
+    
+                    <div class="col-md-6 text-center p-2">
+                        <h5 class="p-2">Nossos envios</h5>
+                        <img src="img/pac.png" style="width: 65px;">
+                        <img src="img/sedex.png" style="width: 65px;">
+                        <img src="img/correios.png" style="width: 65px;">
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="container-fluid p-3" style="background: rgba(0,0,0,0.097);">
+                <div class="row text-center">
+                    <div id="dev" class="col text-right">
+                        <p>Copyright Bernavet Saúde Animal - 2022. Todos os direitos reservados</p>
+                        <p>Desenvolvido por:</p>
+                        <button class="btn btn-sm">
+                            <a href="https://bernardodev.netlify.app"><i  class="fa-sharp fa-solid fa-code"></i> Felipe Bernardo</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <a id="wpp" href="https://wa.me/5517981123860?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" style="position:fixed;width:60px;height:60px;bottom:28px;right:15px;background-color:#25d366;color:#FFF;border-radius:50%;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;z-index:9999;" target="_blank">
+            <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

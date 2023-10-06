@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" href="img/logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1dfeadbb80.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L156K8SJXS">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L156K8SJXS');
+
+        const animation = 'click'
+        const remove = 'card1'
+
+        function find(){
+            document.getElementById('after').classList.add(animation)
+            document.getElementById('card').classList.remove(remove)
+        }    
+
+        function back(){
+            document.getElementById('after').classList.remove(animation)
+            document.getElementById('card').classList.add(remove)
+        }
+
+        //search
+
+        function searchProduct() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('product');
+            
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";                 
+                }
+            }
+        } 
+
+    </script>
+    <title>Bernavet Saúde Animal</title>
+</head>
+<body>
+
+    <div id="card" class="card1">
+        <div class="container text-center">
+            <div class="">
+
+                <button onclick="back()" class="btn btn-lg">
+                    <i style="" class="fa-regular fa-circle-xmark"></i>
+                </button>
+        
+                <div class="card">
+                    <div class="card-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="img/logo.jpeg" style="width: 60px; border-radius: 60px;">
+                                </div>
+                                <div class="col-9">
+                                    <form class="d-flex navbar-brand mt-2" role="search">
+                                        <input id="searchbar" onkeyup="searchProduct()" name="search" class="form-control" type="search" placeholder="Buscar..." aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit" disabled>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </form>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul id="list">
+                            <li class="product"><a href="aminomilk.html">Aminomilk - 1.800gr</a></li>
+                            <li class="product"><a href="an@abolic.html">An@bolic - 500ml</a></li>
+                            <li class="product"><a href="athleticN3.html">Athletic Nutrition Horse - 3KG</a></li>
+                            <li class="product"><a href="athleticN5.html">Athletic Nutrition Horse -5KG</a></li>
+                            <li class="product"><a href="capivorin1.html">Capivorin - 1L</a></li>
+                            <li class="product"><a href="catosal.html">Catosal B12 - 100ml</a></li>
+                            <li class="product"><a href="creatina90.html">Creatina90 Syntec - 500g</a></li>
+                            <li class="product"><a href="creatinaL.html">Creatina Lavizoo - 500g</a></li>
+                            <li class="product"><a href="dectomax.html">Dectomax 1% - 50ml</a></li>
+                            <li class="product"><a href="ectohorse.html">Ecto Horse - 950g</a></li>
+                            <li class="product"><a href="ectomagi.html">Ectomagi Atack - 10KG</a></li>
+                            <li class="product"><a href="lavizMO.html">Laviz M.O Horse - 80g</a></li>
+                            <li class="product"><a href="maxtropin.html">Maxtropin - 240ml</a></li>
+                            <li class="product"><a href="monovin.html">Monovin A - 20ml</a></li>
+                            <li class="product"><a href="nitrobol.html">Nitrobol - 1L</a></li>
+                            <li class="product"><a href="nitroboost.html">NitroBoost - 240ml</a></li>
+                            <li class="product"><a href="nitrocell.html">Nitro Cell -1L</a></li>
+                            <li class="product"><a href="nitroDamino.html">Nitro Dog - Aminoácid</a></li>
+                            <li class="product"><a href="nitroDcondro.html">Nitro Dog - Condroglicin</a></li>
+                            <li class="product"><a href="nitroDpelo.html">Nitro Dog - Pelo e Derm</a></li>
+                            <li class="product"><a href="nitroDpure.html">Nitro Dog - Pure Protein</a></li>
+                            <li class="product"><a href="nitroDvita.html">Nitro Dog - Vitamin</a></li>
+                            <li class="product"><a href="nitroH1.html">Nitro Horse Complet - 1KG</a></li>
+                            <li class="product"><a href="nitroH5.html">Nitro Horse Complet - 5KG</a></li>
+                            <li class="product"><a href="nitroH10.html">Nitro Horse Complet - 10KG</a></li>
+                            <li class="product"><a href="nitroHcrescer.html">Nitro Horse Crescimento - 1L</a></li>
+                            <li class="product"><a href="nitrosilo.html">Niro Silo Shield</a></li>
+                            <li class="product"><a href="oxygen.html">Oxygen Lavizoo - 1L</a></li>
+                            <li class="product"><a href="potenay.html">Potenay 50c - Caixa com 10</a></li>
+                            <li class="product"><a href="saco50.html">Saco Silagem - 50 Unidades</a></li>
+                            <li class="product"><a href="saco100.html">Saco Silagem - 100 Unidades</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div id="after">
+
+        <header id="menu">
+            <nav class="navbar navbar-expand-lg fixed-top bg-white">
+    
+                <div class="container-fluid">
+    
+                    <a id="logo-desk" class="navbar-brand text-center" href="#">
+                        <h2>Bernavet<br>Saúde Animal</h2>
+                    </a>
+    
+                    <div id="logo-mobile">
+                        <form class="d-flex navbar-brand" role="search">
+                            <input onclick="find()" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit" disabled>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                     
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-family: 'Bebas Neue', sans-serif;">Bernavet Saúde Animal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body text-center">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="active" href="products.html">Produtos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contato</a>
+                                </li>
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="#different">Sobre nós</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input onclick="find()" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit" disabled>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+    
+                </div>
+              </nav>
+        </header>
+    
+        <section id="hello">
+            <div class="container-fluid">
+                <div class="row text-center"> 
+                    <h5><span class="text-success">Frete grátis</span> em compras á cima de R$189,90</h5>
+                </div>
+            </div>
+        </section>
+    
+        <section id="description"> 
+    
+            <div id="valorMobile" class="container">
+    
+                <div class="d-flex justify-content-center">
+                    <div class="col-12 text-center">
+                        <h2>Nitro Dog - Pure Protein</h2>
+                    </div>
+                </div> 
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-8">
+                       
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/produtos/nitroDpure/nitroDpure.jpeg" class="img-fluid" alt="..." style="border-radius: 20px;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/produtos/nitroDpure/nitrodpure2.jpeg" class="img-fluid" alt="..." style="border-radius: 20px;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/produtos/nitroDpure/nitrodpure3.jpeg" class="img-fluid" alt="..." style="border-radius: 20px;">
+                                </div>
+                            </div>
+    
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span aria-hidden="true">
+                                    <i style="color: black;" class="fa-solid fa-arrow-left"></i>
+                                </span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span aria-hidden="true">
+                                    <i style="color: black;" class="fa-solid fa-arrow-right"></i>
+                                </span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        
+                        </div>
+    
+                        <div class="p-3" id="descricao">
+    
+                            <div class="p-2">
+                                <div class="row" id="title">
+                                    <div class="text-success text-center p-2">
+                                        <h1>R$140,00</h1>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-4 p-2">
+                                        <img src="img/card.png" width="30px">
+                                        <p>
+                                           3x R$46,66 sem juros
+                                        </p>
+                                    </div>
+    
+                                    <div class="col-4 p-2">
+                                        <img src="img/frete.webp" width="30px">
+                                        <p>
+                                            Frete grátis em compras a partir de R$195,00
+                                        </p>
+                                    </div>
+    
+                                    <div class="col-4 p-2">
+                                        <img src="img/escudo.png" width="30px">
+                                        <p>
+                                            Compra segura
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="text-center">
+                                    <p>
+                                        Enter em contato para comprar agora!
+                                    </p>
+                                    <a href="https://wa.me/5517981123860" class="btn btn-success btn-sm">
+                                        Comprar
+                                    </a>
+                                </div>
+                                
+                                <hr>
+    
+                            </div>
+    
+                            <h3>Descrição do produto</h3>
+                            <br>
+                            *PRODUTO ORIGINAL*
+                            <br>
+                            <br>
+                            Garantimos a procedência e originalidade de nossos produtos. Nossa empresa estabelece critérios legais de vendas, seu pedido será postado no prazo estabelecido de até 24 horas após a compra, devidamente embalado.
+                            <br>  
+                            <br>
+                            NITRO-DOG PURE PROTEIN
+                            <br> <br>
+                            O Suplemento NITRODOG - PURE PROTEIN possui uma formulação de ultima tecnologia e foi desenvolvida com o principal objetivo em gerar ganhos expressivos de:
+                            <br>
+                            • Massa muscular<br>
+                            • Desenvolvimento de carcaça e estatura<br>
+                            • Desenvolvimento de estrutura óssea<br>
+                            • Tonificação e Definição muscular<br>
+                            <br><br>
+                            Formulação extremamente equilibrada, contém as principais vitaminas aminoácidos minerais micro e macro nutrientes, ácidos graxos essenciais e a famosa DMG (Dimetil Glicina).
+                            <br><br>
+                            Utilizando NITRO-DOG PURE PROTEIN na dieta dos pequenos e grandes animais, você garante o máximo de desempenho em ganho de massa muscular, desenvolvimento de carcaça e estrutura óssea, assim como definição e tônus muscular. Também o preferido do mercado pela sua alta porcentagem em proteínas, agindo até como um Whey protein dos animais.
+                            Sua potente formulação estimula e fortifica o sistema imunológico muito utilizado também para tratamentos pós cirúrgicos ou em recuperação auxiliando na melhora rápida da Erliquiose.
+                            <br><br>
+                            Nitro-Dog Pure Protein tem em sua formulação á Creatina e Acido glutâmico , zinco, Vitamina A Vitamina D Vitamina E e ricos em BCAA: Leucina, Valina e Isoleucina, elementos que quando associados atuam como precursores anabólicos naturais de desenvolvimento no metabolismo do animal assim aumentando a conversão alimentar em 120% de aproveitamento de proteínas e carboidratos.
+                            <br><br>
+                            Para que recomendamos o Suplemento NITRO DOG PURE PROTEIN:<br><br>
+                            -O Suplemento é Indicado para Desempenho máximo e resultados logo na primeira semana de tratamento, fortalecimento e manutenção do metabolismo dos animais.
+                            <br>
+                            - Ele contém 95% de Proteína.<br>
+                            - Alta Palatabilidade com 100% de aceitação em cães e gatos.<br>
+                            - Sabor carne.<br>
+                            <br><br>
+                            A Suplementação NITRO-DOG PURE PROTEIN tem a missão de garantir o resultado satisfatório para seu animal, nosso nível de garantia é altíssimo trabalhamos com margens do mercado Americano de satisfação ao cliente, pois atuamos no mercado internacional. Garantimos a melhoria da saúde do cão suplementado e disponibilizamos uma equipe de atendimento altamente especializada para proporcionar uma experiência Premium em todos nossos meios de atendimento. Assim estabelecendo uma relação de confiança e amizade!
+                            Formulação Exclusiva:<br>
+                            A + Completa do Mercado.<br>
+                            A + Concentrad.a<br>
+                            Mais rendimento + Doses + Tratamento com único pote.<br>
+                            O melhor custo benefício.<br>
+                            Matéria Prima importada.<br>
+                            Não temos concorrentes, produto exclusivo e único no mercado.<br>
+                            <br>
+                            Apresentações e Modo de Uso:
+                            <br><br>
+                            NITRO DOG PURE PROTEIN :<br>
+                            Cães e gatos de até 15 kg Administrar 1 snack ao dia, durante 4 a 10 semanas. ( Uso diário)
+                            <br>
+                            Cães e gatos acima de 15 kg administrar 2 a 3 snacks ao dia durante 4 a 10 semanas. ( Uso diário)
+                            <br><br>
+                            -Suplemento em formato de ração Snacks altamente palatáveis.
+                            <br><br>
+                            Este Suplementos gera os seguintes benefícios:
+                            <br>
+                            • Ganho de Massa muscular<br>
+                            • Desenvolvimento de carcaça e estatura<br>
+                            • Desenvolvimento de estrutura óssea<br>
+                            • Tonificação e Definição muscular<br>
+                            • Melhora na Resistência<br>
+                            • Fortifica o sistema imunológico<br>
+                            • Diminuição dos índices de gordura corporal<br>
+                            • Aumento da força física<br>
+                            • Elimina e previne alterações e retardos de crescimento<br>
+                            • Excelente resposta pós operatório<br>
+                            • Resistência para atividades físicas<br>
+                            • Aditivo Pré-bióticos<br>
+                            • Aditivo Probióticos<br>
+                            • Diminuição da fadiga muscular<br>
+                            • Fonte de proteína e energia<br>
+                            • Auxilia na prevenção da anemia<br>
+                            • Auxiliar no tratamento de erliquiose<br>
+                            • Multivitamínico<br>
+                            • Melhora a conversão alimentar EM 100%<br>
+                            • Acelera o crescimento do filhote<br>
+                            • Melhora e da brilho na pelagem<br>
+                            • Melhora a formação de Nervos e Tecidos aumentando a regeneração.<br>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="valorDesk" class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>Nitro Dog - Pure Protein</h2>
+                    </div>
+    
+                    <div class="container">
+                        <div class="row">
+    
+                            <div class="col-8 d-flex justify-content-end">
+    
+                                <div id="carousel" class="carousel slide text-center">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="img/produtos/nitroDpure/nitroDpure.jpeg" class="img-fluid" style="border-radius: 20px;">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/produtos/nitroDpure/nitrodpure2.jpeg" class="img-fluid" style="border-radius: 20px;">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/produtos/nitroDpure/nitrodpure3.jpeg" class="img-fluid" alt="..." style="border-radius: 20px;">
+                                        </div>
+                                    </div>
+            
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                                        <span aria-hidden="true">
+                                            <i style="color: black;" class="fa-solid fa-arrow-left"></i>
+                                        </span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                                        <span aria-hidden="true">
+                                            <i style="color: black;" class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                
+                                </div>
+                                
+                            </div>
+    
+                            <div class="col-3 m-2">
+    
+                                <div class="row">
+    
+                                    <div class="text-success m-2">
+                                        <h1>R$140,00</h1>
+                                    </div>
+    
+                                    <div class="m-2">
+                                        <img src="img/card.png" style="width: 30px;">
+                                        <p>
+                                            3x R$46,66 sem juros
+                                        </p>
+                                    </div>
+    
+                                    <div class="m-2">
+                                        <img src="img/frete.webp" style="width: 25px;">
+                                        <p>
+                                            Frete grátis em compras a partir de R$195,00
+                                        </p>
+                                    </div>
+    
+                                    <div class="m-2">
+                                        <img src="img/escudo.png" style="width: 25px;">
+                                        <p>
+                                            Compra segura
+                                        </p>
+                                    </div>
+    
+                                    <div class="m-2 text-center">
+                                        <p>
+                                            Entre em contato para comprar agora!
+                                        </p>
+                                        <a href="https://wa.me/5517981123860" class="btn btn-success btn-lg">
+                                            Comprar
+                                        </a>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <div class="d-flex justify-content-center m-2">
+                            <div class="col-8">
+                                <hr>
+                                <div id="descricaoPotenay">
+                                    <h3 class="text-center">Descrição do produto</h3>
+                                    <br>
+                                    *PRODUTO ORIGINAL*
+                                    <br>
+                                    <br>
+                                    Garantimos a procedência e originalidade de nossos produtos. Nossa empresa estabelece critérios legais de vendas, seu pedido será postado no prazo estabelecido de até 24 horas após a compra, devidamente embalado.
+                                    <br>    
+                                    <br>
+                                    NITRO-DOG PURE PROTEIN
+                                    <br> <br>
+                                    O Suplemento NITRODOG - PURE PROTEIN possui uma formulação de ultima tecnologia e foi desenvolvida com o principal objetivo em gerar ganhos expressivos de:
+                                    <br>
+                                    • Massa muscular<br>
+                                    • Desenvolvimento de carcaça e estatura<br>
+                                    • Desenvolvimento de estrutura óssea<br>
+                                    • Tonificação e Definição muscular<br>
+                                    <br><br>
+                                    Formulação extremamente equilibrada, contém as principais vitaminas aminoácidos minerais micro e macro nutrientes, ácidos graxos essenciais e a famosa DMG (Dimetil Glicina).
+                                    <br><br>
+                                    Utilizando NITRO-DOG PURE PROTEIN na dieta dos pequenos e grandes animais, você garante o máximo de desempenho em ganho de massa muscular, desenvolvimento de carcaça e estrutura óssea, assim como definição e tônus muscular. Também o preferido do mercado pela sua alta porcentagem em proteínas, agindo até como um Whey protein dos animais.
+                                    Sua potente formulação estimula e fortifica o sistema imunológico muito utilizado também para tratamentos pós cirúrgicos ou em recuperação auxiliando na melhora rápida da Erliquiose.
+                                    <br><br>
+                                    Nitro-Dog Pure Protein tem em sua formulação á Creatina e Acido glutâmico , zinco, Vitamina A Vitamina D Vitamina E e ricos em BCAA: Leucina, Valina e Isoleucina, elementos que quando associados atuam como precursores anabólicos naturais de desenvolvimento no metabolismo do animal assim aumentando a conversão alimentar em 120% de aproveitamento de proteínas e carboidratos.
+                                    <br><br>
+                                    Para que recomendamos o Suplemento NITRO DOG PURE PROTEIN:<br><br>
+                                    -O Suplemento é Indicado para Desempenho máximo e resultados logo na primeira semana de tratamento, fortalecimento e manutenção do metabolismo dos animais.
+                                    <br>
+                                    - Ele contém 95% de Proteína.<br>
+                                    - Alta Palatabilidade com 100% de aceitação em cães e gatos.<br>
+                                    - Sabor carne.<br>
+                                    <br><br>
+                                    A Suplementação NITRO-DOG PURE PROTEIN tem a missão de garantir o resultado satisfatório para seu animal, nosso nível de garantia é altíssimo trabalhamos com margens do mercado Americano de satisfação ao cliente, pois atuamos no mercado internacional. Garantimos a melhoria da saúde do cão suplementado e disponibilizamos uma equipe de atendimento altamente especializada para proporcionar uma experiência Premium em todos nossos meios de atendimento. Assim estabelecendo uma relação de confiança e amizade!
+                                    <br><br>
+                                    Formulação Exclusiva:<br>
+                                    A + Completa do Mercado.<br>
+                                    A + Concentrad.a<br>
+                                    Mais rendimento + Doses + Tratamento com único pote.<br>
+                                    O melhor custo benefício.<br>
+                                    Matéria Prima importada.<br>
+                                    Não temos concorrentes, produto exclusivo e único no mercado.<br>
+                                    <br><br>
+                                    Apresentações e Modo de Uso:
+                                    <br><br>
+                                    NITRO DOG PURE PROTEIN :<br>
+                                    Cães e gatos de até 15 kg Administrar 1 snack ao dia, durante 4 a 10 semanas. ( Uso diário)
+                                    <br>
+                                    Cães e gatos acima de 15 kg administrar 2 a 3 snacks ao dia durante 4 a 10 semanas. ( Uso diário)
+                                    <br><br>
+                                    -Suplemento em formato de ração Snacks altamente palatáveis.
+                                    <br><br>
+                                    Este Suplementos gera os seguintes benefícios:
+                                    <br>
+                                    • Ganho de Massa muscular<br>
+                                    • Desenvolvimento de carcaça e estatura<br>
+                                    • Desenvolvimento de estrutura óssea<br>
+                                    • Tonificação e Definição muscular<br>
+                                    • Melhora na Resistência<br>
+                                    • Fortifica o sistema imunológico<br>
+                                    • Diminuição dos índices de gordura corporal<br>
+                                    • Aumento da força física<br>
+                                    • Elimina e previne alterações e retardos de crescimento<br>
+                                    • Excelente resposta pós operatório<br>
+                                    • Resistência para atividades físicas<br>
+                                    • Aditivo Pré-bióticos<br>
+                                    • Aditivo Probióticos<br>
+                                    • Diminuição da fadiga muscular<br>
+                                    • Fonte de proteína e energia<br>
+                                    • Auxilia na prevenção da anemia<br>
+                                    • Auxiliar no tratamento de erliquiose<br>
+                                    • Multivitamínico<br>
+                                    • Melhora a conversão alimentar EM 100%<br>
+                                    • Acelera o crescimento do filhote<br>
+                                    • Melhora e da brilho na pelagem<br>
+                                    • Melhora a formação de Nervos e Tecidos aumentando a regeneração.<br>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+    
+        <section id="how">
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h5>Como trabalhamos?</h5>
+                        <p>
+                            Atendimento diferenciado com prioridade na saúde dos animais de nossos clientes, 
+                            visando a qualidade de nossos produtos, tornando o custo um benefício.
+                            Trabalhamos com técnicos veterinários avaliando cada caso de nossos clientes, ajudando nossos vendedores
+                            a oferecer um atendimento completo. 
+                        </p>
+                    </div>
+    
+                    <div id="contact" class="col-md-4 text-center">
+                        <h5>Contato</h5>
+                        
+                        <p>Entre em contato para mais informações, ou nos siga nas redes sociais.</p>
+    
+                        <a href="https://wa.me/5517981123860"><i class="fa-brands fa-whatsapp"></i></a>
+    
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+    
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+    
+                    <div class="col-md-4 text-center">
+                        <h5>Menu</h5>
+                        <a href="index.html">Início</a><br>
+                        <a href="products.html">Produtos</a><br>
+                        <a href="#different">Sobre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="container">
+            <hr>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center p-2">
+                        <h5 class="p-2">Formas de pagamento</h5>
+                        <img src="img/visa.png" style="width: 65px;">
+                        <img src="img/boleto.png" style="width: 65px;">
+                        <img src="img/pagseguro.png" style="width: 65px;">
+                        <img src="img/elo.png" style="width: 65px;">
+                        <img src="img/mercadopago.png" style="width: 65px;">
+                        <img src="img/mastercard.png" style="width: 65px;">
+                    </div>
+    
+                    <div class="col-md-6 text-center p-2">
+                        <h5 class="p-2">Nossos envios</h5>
+                        <img src="img/pac.png" style="width: 65px;">
+                        <img src="img/sedex.png" style="width: 65px;">
+                        <img src="img/correios.png" style="width: 65px;">
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="container-fluid p-3" style="background: rgba(0,0,0,0.097);">
+                <div class="row text-center">
+                    <div id="dev" class="col text-right">
+                        <p>Copyright Bernavet Saúde Animal - 2022. Todos os direitos reservados</p>
+                        <p>Desenvolvido por:</p>
+                        <button class="btn btn-sm">
+                            <a href="https://bernardodev.netlify.app"><i  class="fa-sharp fa-solid fa-code"></i> Felipe Bernardo</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <a id="wpp" href="https://wa.me/5517981123860?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" style="position:fixed;width:60px;height:60px;bottom:28px;right:15px;background-color:#25d366;color:#FFF;border-radius:50%;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;z-index:9999;" target="_blank">
+            <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+    <script src="srcipt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

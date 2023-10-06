@@ -1,0 +1,350 @@
+#menu h2{
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 40px;
+}
+#menu form {
+    margin-right: 40px;
+}
+
+#menu li a{
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#menu li a:hover {
+    background: rgba(0, 0, 0, 0.127);
+}
+.card-title {
+    margin-bottom: 15px;
+}
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: 1px black;
+}
+
+#active {
+    color: green;
+}
+
+#hello {
+    background-image: url(img/logo.jpeg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+#slides h4, #new h4, #product h4 {
+    margin-top: 3px;
+    text-transform: uppercase;
+    background-color: rgb(234, 173, 40);
+    color: white;
+}
+
+#description h2 {
+    text-transform: uppercase;
+    background-color: rgb(234, 173, 40);
+    color: white;
+}
+
+#slides {
+    justify-content: center;
+}
+
+#about {
+   background-image: url(img/capabov.jpeg);
+   background-size: 100%;
+   height: 220px;
+}   
+
+#about a {
+    text-transform: uppercase;
+    color: white;
+}
+
+#about a:hover {
+    text-decoration: line-through;
+    transition: 1s; 
+}
+
+#about p{
+    text-align: left;
+}
+
+#frete{
+    text-align: center;
+}
+
+#different {
+    background-color: rgba(0, 0, 0, 0.097);
+    height: 150px;
+}
+
+#icon {
+    padding: 20px;
+}
+
+#icon p {
+    margin-top: 5px;
+}
+
+#text {
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.516); 
+    border-radius: 10px;
+}
+#new, #product, #description {
+    background: rgba(0,0,0,0.097);
+}
+
+#how h5 {
+    background: rgba(0,0,0,0.097);
+    text-transform: uppercase;
+}
+
+#how a {
+    text-decoration: none;
+    color: green;
+}
+
+#how a:hover {
+    text-decoration: underline;
+    font-size: 19px
+}
+
+#dev .btn a {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+#dev .btn {
+    background-color: black;
+}
+#dev .btn:hover{
+    background: white;
+}
+#dev .btn a:hover {
+    color: black;
+}
+
+#contact i {
+    font-size: 28px;
+    padding: 10px;
+}
+
+#contact i:hover{
+    font-size: 30px;
+    transition: all 1s;
+}
+
+footer img {
+    width: 90px;
+}
+
+footer h5{
+    text-transform: uppercase;
+}
+
+.accordion-body ul li{
+    border-radius: 10px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.accordion-body ul li:hover {
+    background-color: rgba(0, 128, 0, 0.365);
+}
+
+.accordion-body ul li a:hover{
+    color: white;
+}
+
+.accordion-body ul li a {
+    color: green;
+    text-decoration: none;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: 2s;
+}
+
+[data-anime="top"]{
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime=bottom]{
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"]{
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+#wpp {
+    animation: animation;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+body {
+    animation: animation1;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes animation {
+    from {
+        
+    }
+    to {
+        bottom: 15px;
+        /*transform:rotatey(360deg);*/
+    }
+}
+
+@keyframes animation1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animation2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 910px){
+    #about {
+        font-size: 13px;
+    }
+    #logo-desk{
+        display: none;
+    }
+    #hello {
+        margin-top: 65px;
+
+    }
+    #hello h5{
+        padding-top: 5px;
+    }
+    #menu form {
+        margin: 0;
+    }
+    #desk {
+        display: none;
+    }
+    #pDesk{
+        display: none;
+    }
+    #valorDesk {
+        display: none;
+    }
+}
+
+
+@media (min-width: 310px) and (max-width: 390px){
+    #about{
+        background-position-y: 10px;
+        background-repeat: no-repeat;
+        font-size: 10px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 911px){
+    #logo-mobile {
+        display: none;
+    }
+    #hello {
+        height: 500px;
+        margin-top: 150px;
+    }
+    #about {
+        background-position-y: -120px;
+        height: 400px;
+    }
+    #text {
+        font-size: 20px;
+        margin-top: 5%;
+    } 
+    #how p {
+        text-align: left;
+    }
+    #mobile {
+        display: none;
+    }
+    #pMobile {
+        display: none;
+    }
+    #description img {
+        width: 70%;
+    }
+    #valorMobile {
+        display: none;
+    }
+    #card {
+        font-size: 20px;
+    }
+}
+
+/*---------*/
+
+.click{
+    transition: 1s;
+    display: none;
+}
+
+#card {
+    width: 70%;
+    position: fixed;
+    top: 80px;
+    left: 15%;
+    background-color: white;
+    animation: animation2;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+.card1 {
+   display: none;
+}
+
+#card ul {
+    list-style: none;
+    text-align: left;
+}
+
+#card ul li a {
+    text-decoration: none;
+    color: green;
+}
+#card ul li a:hover {
+    text-decoration: underline;
+}
